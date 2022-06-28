@@ -1,5 +1,9 @@
 const elList = document.querySelector(".js-list")
 
+const time = function(a) {
+  return (Math.floor(a / 31536000) + 1970);
+}
+
 films.forEach((film) => {
   let elItem = document.createElement("li");
   elItem.classList.add("item")
@@ -16,6 +20,9 @@ films.forEach((film) => {
     elSubitem.textContent = gen;
     elSublist.appendChild(elSubitem);
   }
+  let elTime = document.createElement("p");
+  elTime.textContent = time(film.release_date);
+  elTime.classList.add("desc");
 
   elText.textContent = film.overview;
   elImg.src = film.poster;
@@ -24,10 +31,8 @@ films.forEach((film) => {
   elItem.appendChild(elImg);
   elItem.appendChild(elSubheader);
   elItem.appendChild(elText);
+  elItem.appendChild(elTime);
   elItem.appendChild(elSublist);
   elList.appendChild(elItem);
 
-  const a = new Date(film.release_date);
-  b = a.getFullYear();
-  console.log(b);
 })

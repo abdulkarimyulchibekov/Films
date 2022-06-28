@@ -71,3 +71,7 @@ img {
 .sublist {
   margin-bottom: 10px;
 }
+
+.desc {
+  text-align: center;
+}
