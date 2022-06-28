@@ -21,7 +21,7 @@ films.forEach((film) => {
     elSublist.appendChild(elSubitem);
   }
   let elTime = document.createElement("p");
-  elTime.textContent = time(film.release_date);
+  elTime.textContent = `year of production: ${time(film.release_date)}`
   elTime.classList.add("desc");
 
   elText.textContent = film.overview;
