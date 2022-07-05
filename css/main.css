@@ -78,4 +78,20 @@ img {
 
 .select {
   margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+.a_to_z , .z_to_a, .news , .olds {
+  padding: 5px 15px;
+  background-color: blue;
+  color: white;
+  border: 1.4px solid white;
+  transition: all .3s ease;
+  font-weight: 500;
+}
+
+.a_to_z:hover , .z_to_a:hover, .news:hover , .olds:hover {
+  background-color: #fff;
+  color: blue;
+  border: 1.4px solid blue;
 }
